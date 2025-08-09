@@ -132,7 +132,7 @@ const Products = () => {
                   {/* price */}
                   <p className="prize">${product.price}</p>
                   {/* add to cart/out of stock button */}
-                  {product.length > 0 ? (
+                  {product.price > 15 ? (
                     <button
                       type="button"
                       onClick={() => {
@@ -140,7 +140,9 @@ const Products = () => {
                         addProduct(product);
                       }}
                       className="add-to-cart"
-                    ></button>
+                    >
+                      Add To Cart
+                    </button>
                   ) : (
                     <button type="button" disabled className="out-of-stock">
                       Out of Stock
@@ -163,7 +165,7 @@ const Products = () => {
             <hr />
           </div>
         </div>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center gap-5">
           {loading ? <Loading /> : <ShowProducts />}
         </div>
       </div>

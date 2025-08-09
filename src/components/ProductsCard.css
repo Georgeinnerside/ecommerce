@@ -1,7 +1,10 @@
 /* css for the enntire product card */
 .product-card {
+  display: grid;
+  gap: 2rem;
   width: 16rem;
   border-radius: 0.5rem;
+  padding: 0.75rem;
   overflow: hidden;
   cursor: pointer;
   background-color: white;
@@ -90,12 +93,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  p {
+    margin-bottom: 0px !important;
+  }
 }
 
 .price {
   font-size: 0.875rem;
   color: gray;
   font-weight: 500;
+  margin-bottom: 0px !important;
 }
 
 /* different color for add to cart */
@@ -125,4 +132,3 @@
   cursor: not-allowed;
   border: none;
 }
-
